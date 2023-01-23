@@ -1,5 +1,5 @@
-# MurphyDisplay (v0.4) - MurphyDisplay will be switched to .NET CORE 7 (from Framework 4.8) starting on Dec. 2022 
-MurphyDisplay is a .NET Core 7 all in one (2D/3D) display API designed as a debugging/display tool. It can be used to easily display camera frames, 3D point clouds, 3D objects, 2D/3D overlays, etc..
+# MurphyDisplay git was closed and the project was renamed to MulDisplay. It isn't available anymore until further notice.
+MulDisplay is a .NET Core 7 all in one (2D/3D) display API designed as a debugging/display tool. It can be used to easily display camera frames, 3D point clouds, 3D objects, 2D/3D overlays, etc..
 
 ## Table of Contents
 <ol>
@@ -39,7 +39,7 @@ You can then use myDrawingControl and myDrawingControl.DrawingContext to use all
 
 ## Roadmap
 <ul>
-  <li>Nothing big planned at the moment besides chasing bugs.</li>
+  <li>The project is currently being reworked.</li>
 </ul>
 
 ## FAQ
@@ -51,10 +51,9 @@ Also make sure to build the whole solution at least once in either x86 or x64.
 The project has now been switched to .NET Core 7.0 but previous versions are still usable with Framework 4.8 if needed. Also, even if developped with .NET Core, the project might still remain compatible with .NET Framework 4.8 as long as you manually switch it and rebuild.
 
 ## License
-MurphyDisplay is now available under the LGPL-2.1 License which allows commercial or private use. Only modifications made to the library itself must be published under LGPL.<br/>
-Emgu CV is only used in some of the examples and isn't used at all in any of the MurphyDisplay source code.<br/>
+As the project is being reworked, licensing is subject to changes.<br/>
 
-Libraries used by MurphyDisplay :<br/>
+Libraries used by MulDisplay :<br/>
 <ul>
   <li>IrrlichtLime under the Zlib License, see https://github.com/greenya/irrlichtlime.</li>
   <li>Irrlicht under the Zlib/libpng License, see https://sourceforge.net/projects/irrlicht/ or https://irrlicht.sourceforge.io/.</li>
