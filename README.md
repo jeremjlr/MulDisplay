@@ -32,9 +32,9 @@ myPanel.Controls.Add(myDrawingControl);
 You can then use myDrawingControl and myDrawingControl.DrawingContext to use all the API's features.
 
 <p>
-            <img width=480 height=270 src="https://github.com/jeremjlr/MurphyDisplay/blob/main/Screen2.png"/><br/>
-            <img width=480 height=270 src="https://github.com/jeremjlr/MurphyDisplay/blob/main/Screen1.png"/><br/>
-            <img width=480 height=270 src="https://github.com/jeremjlr/MurphyDisplay/blob/main/PointCloud.png"/><br/>
+            <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/Screen2.png"/><br/>
+            <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/Screen1.png"/><br/>
+            <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/PointCloud.png"/><br/>
 </p>
 
 ## Roadmap
