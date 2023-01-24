@@ -24,7 +24,7 @@ Double click to go fullscreen.
 I recommend checking the examples to understand how to use the API but you can get started very quickly, it only requires a WindowsForms panel, whether it's native WinForms or embedded in a WPF App with the following code : 
 
 ```C#
-DrawingControl myDrawingControl = new DrawingControl(Driver.Direct3D, ViewMode._3D, false, false, 5, 1f, 4, 250, false);
+DrawingControl myDrawingControl = new DrawingControl(Driver.Direct3D, ViewMode._3D, false, false, 5, 1f, 4, false, false);
 myDrawingControl.Dock = DockStyle.Fill;
 myPanel.Controls.Add(myDrawingControl);
 ```
