@@ -41,6 +41,7 @@ You can then use myDrawingControl and myDrawingControl.DrawingContext to use all
 <ul>
   <li>The project is currently being reworked.</li>
   <li>A NuGet version will be released with the new project. As well as examples on this repository.</li>
+  <li>Adding more supported formats.</li>
 </ul>
 
 ## FAQ
