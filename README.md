@@ -50,7 +50,7 @@ Make sure you have DirectX 9.0c/OpenGL, .NET 7.0 (or .NET Framework 4.8) and <a 
 Also make sure to build the whole solution at least once in either x86 or x64.
 
 <b>.NET Core ? .NET Framework ?</b><br/>
-The project has now been switched to .NET 7.0 but I'll keep releasing .NET Framework 4.8 and .NET Core 3.1 versions as well.
+The project has now been switched to .NET 7.0 but I'll keep releasing .NET Framework 4.8 versions as well.
 
 ## License
 As the project is being reworked, licensing is subject to changes.<br/>
