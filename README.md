@@ -1,5 +1,5 @@
 # MurphyDisplay git was closed and the project was renamed to MulDisplay. Pre-release showcase/example available.
-MulDisplay is a .NET 7 all in one (2D/3D) display API designed as a debugging/display tool. It can be used to easily display camera frames, 3D point clouds, 3D objects, 2D/3D overlays, etc..
+MulDisplay is a .NET all in one (2D/3D) display API designed as a debugging/display tool. It can be used to easily display camera frames, 3D point clouds, 3D objects, 2D/3D overlays, etc..
 
 ## Table of Contents
 <ol>
