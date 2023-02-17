@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64;x86</Platforms>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Copyright>Copyright © Jérémy LEPROU 2023</Copyright>
+    <PackageProjectUrl> www.mulmul-technologies.com</PackageProjectUrl>
+    <Description>MulDisplay is a .NET all in one (2D/3D) display API designed as a debugging/display tool. It can be used to easily display camera frames, 3D point clouds, 3D objects, 2D/3D overlays, etc..</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>Data\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="IrrlichtLime">
+      <HintPath>Data\IrrlichtLime.dll</HintPath>
+    </Reference>
+    <Reference Include="MulDisplay">
+      <HintPath>Data\MulDisplay.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /i /e /s /v /y &quot;$(SolutionDir)Data&quot; &quot;$(TargetDir)&quot;" />
+  </Target>
+
+</Project>
