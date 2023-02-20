@@ -56,6 +56,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button14 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,10 +76,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(7, 267);
+            this.button1.Location = new System.Drawing.Point(7, 244);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 35);
+            this.button1.Size = new System.Drawing.Size(128, 25);
             this.button1.TabIndex = 9;
             this.button1.Text = "Camera to Maya";
             this.button1.UseVisualStyleBackColor = true;
@@ -162,6 +163,7 @@
             // 
             // _mainPanel
             // 
+            this._mainPanel.BackColor = System.Drawing.SystemColors.Control;
             this._mainPanel.Location = new System.Drawing.Point(187, 13);
             this._mainPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this._mainPanel.Name = "_mainPanel";
@@ -271,10 +273,10 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(7, 225);
+            this.button15.Location = new System.Drawing.Point(7, 213);
             this.button15.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(128, 35);
+            this.button15.Size = new System.Drawing.Size(128, 25);
             this.button15.TabIndex = 25;
             this.button15.Text = "Camera to Face";
             this.button15.UseVisualStyleBackColor = true;
@@ -371,6 +373,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button14);
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.groupBox2);
@@ -397,6 +400,17 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "3D";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(7, 275);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(128, 25);
+            this.button14.TabIndex = 26;
+            this.button14.Text = "Camera to House";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
             // FullExampleForm
             // 
@@ -451,6 +465,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private Button button14;
     }
 }
 

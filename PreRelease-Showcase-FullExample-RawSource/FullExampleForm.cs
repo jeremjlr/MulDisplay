@@ -18,7 +18,7 @@ namespace FullExample
     public partial class FullExampleForm : Form
     {
         //Initializes the main drawing control
-        private DrawingControl _mainDrawingControl = new DrawingControl(Driver.Direct3D, ViewMode._3D, false, false, 5, 1f, 4, false, false);
+        private DrawingControl _mainDrawingControl = new DrawingControl(Driver.Direct3D, ViewMode._3D, false, false, 5, 1f, 8, false, false);
         private bool _firstGauss = true;
 
         #region Builds basic 2D and 3D scenes with overlays etc
@@ -26,6 +26,7 @@ namespace FullExample
         public FullExampleForm()
         {
             InitializeComponent();
+            _mainPanel.BackColor = Color.FromArgb(25, Color.Black);
             updateButton.Checked = true;
             //Always refreshes the context, this will use more ressources.
             _mainDrawingControl.DrawingContext.AlwaysRefresh = true;
@@ -133,6 +134,7 @@ namespace FullExample
 
             //Load and add the skull and 2 overlays
             data = _mainDrawingControl.DrawingContext.Datas3D.Add("Media/skull.ply", "Skull");
+            data.BackFaceCulling = false;
             data.Rotation = new Vector3Df(0f, -90f, -90f);
             data.Position = new Vector3Df(2500, 2500, 2500);
             //These are 2D overlays in a 3D environment, they always face the camera
@@ -143,6 +145,7 @@ namespace FullExample
 
             //Load a cloud point obtained from 3D cameras
             data = _mainDrawingControl.DrawingContext.Datas3D.Add("Media/face.ply", "Face");
+            data.BackFaceCulling = false;
             data.Scale = new Vector3Df(2f, 2f, 2f);
             data.Rotation = new Vector3Df(90f, -90f, 0);
             data.Position = new Vector3Df(-500, 2500, 2500);
@@ -234,6 +237,12 @@ namespace FullExample
             data.Scale = new Vector3Df(500, 500, 500);
             data.Rotation = new Vector3Df(0, 90f, 0);
 
+            //HouseInterior
+            data = _mainDrawingControl.DrawingContext.Datas3D.Add("Media/InteriorTest.obj", "HouseInterior");    
+            data.Position = new Vector3Df(-3000, -3000, 3000);
+            data.Scale = new Vector3Df(300, 300, 300);
+            //data.Rotation = new Vector3Df(0, 90f, 0);
+
             //Lines
             _mainDrawingControl.DrawingContext.Overlays3D.AddLine(new Vector3Df(3000, -3000, -4000), new Vector3Df(3000, -2500, -2500), Color.Orange);
             _mainDrawingControl.DrawingContext.Overlays3D.AddOverlay2D3D(new Cross2D3D(3000, -3000, -4000, Color.Red, 10, 10, 2));
@@ -246,10 +255,10 @@ namespace FullExample
             _mainDrawingControl.DrawingContext.Overlays3D.AddOverlay2D3D(new Cross2D3D(3000, -3500, 2000, Color.Red, 10, 10, 2));
 
             //Moving cubes
-            StaticCuboid redMovingCube = _mainDrawingControl.DrawingContext.Overlays3D.AddCuboid(300, 600, 300, Color.Red);
-            StaticCuboid blueMovingCube = _mainDrawingControl.DrawingContext.Overlays3D.AddCuboid(300, 600, 300, Color.Blue);
-            redMovingCube.Position = new Vector3Df(3000, -3000, 3000);
-            blueMovingCube.Position = new Vector3Df(3000, -3000, 3500);
+            StaticCuboid redMovingCube = _mainDrawingControl.DrawingContext.Overlays3D.AddCuboid(600, 1200, 600, Color.Red);
+            StaticCuboid blueMovingCube = _mainDrawingControl.DrawingContext.Overlays3D.AddCuboid(600, 1200, 600, Color.Blue);
+            redMovingCube.Position = new Vector3Df(4200, -3000, 3500);
+            blueMovingCube.Position = new Vector3Df(4200, -3000, 4400);
             new Task(() => cubeAnimator(redMovingCube, blueMovingCube)).Start();
 
             //Axis
@@ -276,16 +285,16 @@ namespace FullExample
             _mainDrawingControl.DrawingContext.Refresh();
         }
 
-        private void cubeAnimator(StaticCuboid red, StaticCuboid blue)
+        private async void cubeAnimator(StaticCuboid red, StaticCuboid blue)
         {
             int sign = 1;
             while (_mainDrawingControl.DrawingContext.IsRunning)
             {
-                red.Position = new Vector3Df(red.Position.X, red.Position.Y + (10 * sign), red.Position.Z);
+                red.Position = new Vector3Df(red.Position.X, red.Position.Y + (12f * sign), red.Position.Z);
                 if (red.Position.Y <= -3500 || red.Position.Y >= -2500)
                     sign = -sign;
-                blue.Position = new Vector3Df(blue.Position.X, blue.Position.Y - (10 * sign), blue.Position.Z);
-                Thread.Sleep(25);
+                blue.Position = new Vector3Df(blue.Position.X, blue.Position.Y - (12f * sign), blue.Position.Z);
+                await Task.Delay(6);
             }
         }
         #endregion
@@ -849,5 +858,11 @@ namespace FullExample
             _isSimulating = false;
         }
         #endregion
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            _mainDrawingControl.DrawingContext.SetCameraTarget(_mainDrawingControl.DrawingContext.Datas3D.GetByName("HouseInterior"), 2000);
+            _mainDrawingControl.DrawingContext.Refresh();
+        }
     }
 }
