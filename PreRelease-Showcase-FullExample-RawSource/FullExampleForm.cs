@@ -241,7 +241,6 @@ namespace FullExample
             data = _mainDrawingControl.DrawingContext.Datas3D.Add("Media/InteriorTest.obj", "HouseInterior");    
             data.Position = new Vector3Df(-3000, -3000, 3000);
             data.Scale = new Vector3Df(300, 300, 300);
-            //data.Rotation = new Vector3Df(0, 90f, 0);
 
             //Lines
             _mainDrawingControl.DrawingContext.Overlays3D.AddLine(new Vector3Df(3000, -3000, -4000), new Vector3Df(3000, -2500, -2500), Color.Orange);
