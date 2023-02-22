@@ -38,7 +38,6 @@ You can then use myDrawingControl and myDrawingControl.DrawingContext to use all
             <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/Screen4.jpg"/><br/>
             <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/Screen5.jpg"/><br/>
             <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/Screen6.jpg"/><br/>
-            <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/PointCloud.png"/><br/>
 </p>
 
 ## Roadmap
