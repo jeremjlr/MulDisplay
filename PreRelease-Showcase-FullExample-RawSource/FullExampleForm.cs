@@ -12,6 +12,7 @@ using IrrlichtLime.Core;
 using MulDisplay;
 using MulDisplay.Components2D;
 using MulDisplay.Components3D;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FullExample
 {
@@ -192,6 +193,7 @@ namespace FullExample
             vertices.Add(new IrrlichtLime.Video.Vertex3D(-5000, -5000, -5000, 0, 0, 0, IrrlichtLime.Video.Color.SolidCyan));
 
             Data3D bigBox = _mainDrawingControl.DrawingContext.Datas3D.Add(vertices, "BigBox");
+            bigBox.BackFaceCulling = false;
             bigBox.PointCloudSize = 5;
             bigBox.Overlays3D.AddOverlay2D3D(new Text2D3D("The BigBox !", 5000, 5000, -5000, Color.Purple));
             //Box lines
@@ -529,6 +531,7 @@ namespace FullExample
                     newGauss.DrawBox = oldGauss.DrawBox;
                     newGauss.Rotation = oldGauss.Rotation;
                     newGauss.Position = oldGauss.Position;
+                    newGauss.BackFaceCulling = false;
                     _mainDrawingControl.DrawingContext.Datas3D.Remove(oldGauss);
                     _mainDrawingControl.DrawingContext.ReleaseScene();
                 }
@@ -605,18 +608,6 @@ namespace FullExample
         private void button2_Click(object sender, EventArgs e)
         {
             _mainDrawingControl.DrawingContext.Datas3D.GetByName("Skull").RenderMode = RenderMode.Wireframe;
-            _mainDrawingControl.DrawingContext.Refresh();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            _mainDrawingControl.DrawingContext.Datas3D.GetByName("Skull").DrawNormals = true;
-            _mainDrawingControl.DrawingContext.Refresh();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            _mainDrawingControl.DrawingContext.Datas3D.GetByName("Skull").DrawNormals = false;
             _mainDrawingControl.DrawingContext.Refresh();
         }
 
