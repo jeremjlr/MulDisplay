@@ -3,6 +3,7 @@
 // Copyright (C) 2022 Jérémy LEPROU jerem.jlr@gmail.com
 
 using System.ComponentModel;
+using System.Diagnostics;
 using Emgu.CV;
 using Emgu.CV.Cvb;
 using Emgu.CV.CvEnum;
@@ -240,7 +241,7 @@ namespace FullExample
             data.Rotation = new Vector3Df(0, 90f, 0);
 
             //HouseInterior
-            data = _mainDrawingControl.DrawingContext.Datas3D.Add("Media/InteriorTest.obj", "HouseInterior");    
+            data = _mainDrawingControl.DrawingContext.Datas3D.Add("Media/InteriorTest.obj", "HouseInterior");
             data.Position = new Vector3Df(-3000, -3000, 3000);
             data.Scale = new Vector3Df(300, 300, 300);
 
@@ -664,7 +665,6 @@ namespace FullExample
         }
 
         private bool _isSimulating = false;
-        private Mutex _simulationMutex = new Mutex();
         private BackgroundWorker cameraCapturer = new BackgroundWorker();
         private void CameraCapture(object sender, DoWorkEventArgs e)
         {
@@ -681,7 +681,6 @@ namespace FullExample
             {
                 if (_mainDrawingControl.ViewMode == ViewMode._2D && !_isSimulating)
                 {
-                    _simulationMutex.WaitOne();
                     Mat frame = cameraCapture.QueryFrame();
                     Mat smoothedFrame = new Mat();
                     CvInvoke.GaussianBlur(frame, smoothedFrame, new Size(3, 3), 1); //filter out noises
@@ -741,7 +740,6 @@ namespace FullExample
                     forgroundMask.Dispose();
                     blobs.Dispose();
 
-                    _simulationMutex.ReleaseMutex();
                 }
                 else
                 {
@@ -749,7 +747,11 @@ namespace FullExample
                 }
 
             }
+            cameraCapture.Stop();
             cameraCapture.Dispose();
+            fgDetector.Dispose();
+            blobDetector.Dispose();
+            tracker.Dispose();
         }
 
         //Returns a red circle with a cross inside and a message
@@ -789,7 +791,6 @@ namespace FullExample
                 List<Overlay2D> every25frameCircle = GetRandomRedCircle(350, 1000, 100, 600, "Every 25 frame");
                 if (_mainDrawingControl.ViewMode == ViewMode._2D && _isSimulating)
                 {
-                    _simulationMutex.WaitOne();
                     for (int i = 0; i < images.Length; i++)
                     {
                         if (!_isSimulating)
@@ -817,7 +818,6 @@ namespace FullExample
                         _mainDrawingControl.DrawingContext.BuildAndRefresh();
                         _mainDrawingControl.DrawingContext.LimitFPS = false;
                     }
-                    _simulationMutex.ReleaseMutex();
                 }
                 else
                 {
@@ -853,6 +853,13 @@ namespace FullExample
         {
             _mainDrawingControl.DrawingContext.SetCameraTarget(_mainDrawingControl.DrawingContext.Datas3D.GetByName("HouseInterior"), 2000);
             _mainDrawingControl.DrawingContext.Refresh();
+        }
+
+        private void FullExampleForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Not pretty but needed because of this version of Emgu, will probably not be needed in the future
+            //Not very important as Emgu is only used to as an example to capture camera frames, it has nothing to do with the API
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

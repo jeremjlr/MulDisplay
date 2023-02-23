@@ -421,6 +421,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FullExampleForm";
             this.Text = "MulDisplay Test";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FullExampleForm_FormClosing);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
