@@ -9,6 +9,7 @@ MulDisplay is a .NET all in one (2D/3D) display API designed as a debugging/disp
   <li><a href="#roadmap">Roadmap</a></li>
   <li><a href="#faq">FAQ</a></li>
   <li><a href="#license">License</a></li>
+  <li><a href="#hire-me">Hire Me</a></li>
   <li><a href="#contact">Contact</a></li>
 </ol>
 
@@ -22,6 +23,7 @@ The goal is to provide a quick and easy way to display things in order to either
 We are open to requests and suggestions for future developpement/improvements.<br/>
 It is developped with Visual Studio 2022 and .NET 7.0 but there is also a Framework 4.8 compatible version.<br/>
 
+Website : www.mulmul-technologies.com
 Examples :  https://github.com/jeremjlr/MulDisplay/releases<br/>
 Documentation : https://jeremjlr.github.io/MulDisplay/index.html<br/>
 
@@ -73,6 +75,9 @@ Libraries used by MulDisplay :<br/>
   <li>IrrlichtLime under the Zlib License, see https://github.com/greenya/irrlichtlime.</li>
   <li>Irrlicht under the Zlib/libpng License, see https://sourceforge.net/projects/irrlicht/ or https://irrlicht.sourceforge.io/.</li>
 </ul>
+
+## Hire Me
+If you have any offer that is beyond the scope of simple licensing or if you simply like one of my products, feel free to reach out to me, I am open to any opportunity, anywhere.
 
 ## Contact
 If you have any question or suggestion feel free to reach out to us at jerem.jlr@gmail.com.
