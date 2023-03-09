@@ -80,4 +80,4 @@ Libraries used by MulDisplay :<br/>
 If you have any offer that is beyond the scope of simple licensing or if you simply like one of my products, feel free to reach out to me, I am open to any opportunity, anywhere.
 
 ## Contact
-If you have any question or suggestion feel free to reach out to us at jerem.jlr@gmail.com.
+If you have any question or suggestion feel free to reach out to us at contact@mulmul-technologies.com or jerem.jlr@gmail.com.
