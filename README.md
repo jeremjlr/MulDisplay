@@ -23,6 +23,7 @@ The goal is to provide a quick and easy way to display things in order to either
 We are open to requests and suggestions for future developpement/improvements.<br/>
 It is developped with Visual Studio 2022 and .NET 7.0 but there is also a Framework 4.8 compatible version.<br/>
 
+NuGet : https://www.nuget.org/packages/MulDisplay<br/>
 Website : www.mulmul-technologies.com<br/>
 Examples :  https://github.com/jeremjlr/MulDisplay/releases<br/>
 Documentation : https://jeremjlr.github.io/MulDisplay/index.html<br/>
