@@ -9,7 +9,6 @@ MulDisplay is a .NET all in one (2D/3D) display API designed as a debugging/disp
   <li><a href="#roadmap">Roadmap</a></li>
   <li><a href="#faq">FAQ</a></li>
   <li><a href="#license">License</a></li>
-  <li><a href="#hire-me">Hire Me</a></li>
   <li><a href="#contact">Contact</a></li>
 </ol>
 
@@ -20,7 +19,7 @@ This bypasses WinForms/Wpf limitations and allows for optimized and efficient dr
 Using 3D in .NET WPF or WindowsForms has never been easier, it can done with only a few lines of code.<br/>
 The purpose of this tool is to encapsulate as much 2D/3D as possible in order to have a simple, lightweight and extremly easy-to-use API.<br/>
 The goal is to provide a quick and easy way to display things in order to either visualize or simply debug algorithms.<br/>
-We are open to requests and suggestions for future developpement/improvements.<br/>
+I am open to requests and suggestions for future developpement/improvements.<br/>
 It is developped with Visual Studio 2022 and .NET 7.0 but there is also a Framework 4.8 compatible version.<br/>
 
 NuGet : https://www.nuget.org/packages/MulDisplay<br/>
@@ -31,7 +30,7 @@ You can easily switch from 3D to 2D using the right click menu.<br/>
 You can use the mouse left click/middle click/wheel to move the camera.<br/>
 Double click to go fullscreen.<br/>
 
-We recommend checking out the examples to understand how to use the API but you can get started very quickly, it only requires a WindowsForms panel, whether it's native WinForms or embedded in a WPF App : 
+I recommend checking out the examples to understand how to use the API but you can get started very quickly, it only requires a WindowsForms panel, whether it's native WinForms or embedded in a WPF App : 
 
 ```C#
 DrawingControl myDrawingControl = new DrawingControl(Driver.Direct3D, ViewMode._3D, false, false, 5, 1f, 4, false, false);
@@ -57,7 +56,7 @@ You can then use myDrawingControl and myDrawingControl.DrawingContext to use all
   <li>Have a variant of the API with a more recent/powerful 3D Engine (Ogre3D) => Work in progress</li>
   <li>Fix of known&reported bugs</li>
   <li>Add new features (depending on users' demands) while KEEPING the original idea of the API and keeping it as simple as possible for the user</li>
-  <li>MAUI/Linux</li>
+  <li>MAUI ?</li>
 </ul>
 
 ## FAQ
@@ -68,7 +67,7 @@ Make sure to have at least DirectX 9.0c/OpenGL4.5, .NET 7.0 (or .NET Framework 4
 MulDisplay is being developped with .NET 6.0/7.0 but it still has a .NET Framework 4.8 compatible version published on NuGet.
 
 ## License
-MulDisplay is entirely free for any non-commercial project. If you plan to use MulDisplay in a commercial project, please contact me.<br/>
+MulDisplay is entirely free for any non-commercial project. If you plan to use MulDisplay in a commercial project, please contact me and let me know.<br/>
 
 Libraries used by MulDisplay :<br/>
 <ul>
@@ -76,8 +75,5 @@ Libraries used by MulDisplay :<br/>
   <li>Irrlicht under the Zlib/libpng License, see https://sourceforge.net/projects/irrlicht/ or https://irrlicht.sourceforge.io/.</li>
 </ul>
 
-## Hire Me
-If you have any offer that is beyond the scope of simple licensing or if you simply like one of my products, feel free to reach out to me.
-
 ## Contact
-If you have any question or suggestion feel free to reach out to us at contact@mulmul-technologies.com or jerem.jlr@gmail.com.
+If you have any question or suggestion feel about anything, free to reach out to me at contact@mulmul-technologies.com or jerem.jlr@gmail.com.
