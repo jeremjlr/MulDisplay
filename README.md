@@ -52,11 +52,7 @@ You can then use myDrawingControl and myDrawingControl.DrawingContext to use all
 ## Roadmap
 <ul>
   <li>Upgrade the engine to the latest Irrlicht release (That will solve the 32-bit obj mesh loading issue)</li>
-  <li>More supported formats (or better support of formats and their variants in general) (current MulDisplay prefered formats are .ply and .obj)</li>
-  <li>Have a variant of the API with a more recent/powerful 3D Engine (Ogre3D) => Work in progress</li>
   <li>Fix of known&reported bugs</li>
-  <li>Add new features (depending on users' demands) while KEEPING the original idea of the API and keeping it as simple as possible for the user</li>
-  <li>MAUI ?</li>
 </ul>
 
 ## FAQ
