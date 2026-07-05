@@ -28,7 +28,7 @@ You can easily switch from 3D to 2D using the right click menu.<br/>
 You can use the mouse left click/middle click/wheel to move the camera.<br/>
 Double click to go fullscreen.<br/>
 
-I recommend checking out the examples to understand how to use the control but you can get started very quickly, it only requires a WindowsForms panel, whether it's native WindowsForms or embedded in a WPF App :
+<b>I highly recommend checking out the examples to understand how to use the control</b> but you can get started very quickly, it only requires a WindowsForms panel, whether it's native WindowsForms or embedded in a WPF App :
 
 ```C#
 DrawingControl myDrawingControl = new DrawingControl(Driver.Direct3D, ViewMode._3D, false, false, 5, 1f, 4, false, false);
