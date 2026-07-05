@@ -63,7 +63,8 @@ Make sure to have at least DirectX 9.0c/OpenGL4.5, .NET 7.0 (or .NET Framework 4
 MulDisplay is being developped with .NET 6.0/7.0 but it still has a .NET Framework 4.8 compatible version published on NuGet.
 
 ## License
-MulDisplay is entirely free for any non-commercial or commercial project. (see License)<br/>
+MulDisplay is provided free of charge for use in personal and commercial projects.<br/>
+Redistribution, modification, reverse engineering, or rehosting of the package is prohibited without explicit permission.<br/>
 
 Libraries used by MulDisplay :<br/>
 <ul>
