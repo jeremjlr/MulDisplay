@@ -51,7 +51,7 @@ You can then use `myDrawingControl` and `myDrawingControl.DrawingContext` to use
 Make sure to have at least DirectX 9.0c/OpenGL4.5, the correct .NET version and Microsoft Visual C++ Redistributable Package installed.<br/>
 
 <b>.NET Core ? .NET Framework ?</b><br/>
-MulDisplay is being developed with .NET 10.0 but is compatible with multiple previous .NET versions.<br/>
+MulDisplay is being developed with .NET 10 but is compatible with multiple previous .NET versions.<br/>
 I recommend upgrading your .NET version as I do not guarantee that future versions will also be compatible with older versions.<br/>
 
 ## Roadmap
