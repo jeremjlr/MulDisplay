@@ -74,4 +74,4 @@ Libraries used by MulDisplay :<br/>
 </ul>
 
 ## Contact
-If you want to reach out to me for any reason, have any question or suggestion, feel free. - jerem.jlr@gmail.com - www.github.com/jeremjlr - www.mulmul-technologies.com - contact@mulmul-technologies.com
+If you want to reach out to me for any reason, have any question or suggestion, feel free. - jerem.jlr@gmail.com - www.github.com/jeremjlr
