@@ -36,7 +36,7 @@ myDrawingControl.Dock = DockStyle.Fill;
 myPanel.Controls.Add(myDrawingControl);
 ```
 
-You can then use `myDrawingControl` and `myDrawingControl.DrawingContext` to use all the API's features.
+You can then use `myDrawingControl` and `myDrawingControl.DrawingContext` to use all the control's features.
 
 <p>
             <img width=480 height=270 src="https://github.com/jeremjlr/MulDisplay/blob/main/Screen1.jpg"/><br/>
