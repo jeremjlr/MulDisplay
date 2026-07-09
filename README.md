@@ -24,6 +24,8 @@ NuGet : https://www.nuget.org/packages/MulDisplay<br/>
 Examples :  https://github.com/jeremjlr/MulDisplay/releases<br/>
 Documentation : https://jeremjlr.github.io/MulDisplay/index.html<br/>
 
+This control requires the application to be built for x64.<br />
+
 You can easily switch from 3D to 2D using the right click menu.<br/>
 You can use the mouse left click/middle click/wheel to move the camera.<br/>
 Double click to go fullscreen.<br/>
